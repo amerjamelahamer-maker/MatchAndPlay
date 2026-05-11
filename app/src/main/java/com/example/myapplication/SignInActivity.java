@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class SignInActivity extends AppCompatActivity {
+
     private TextView signUpTV;
 
     @Override
