@@ -28,6 +28,7 @@ public class SignInActivity extends AppCompatActivity {
         signUpTV.setOnClickListener(v -> {
             Intent intent = new Intent(SignInActivity.this, SignUpaActivity.class);
             startActivity(intent);
+            finish();
         });
         }
 

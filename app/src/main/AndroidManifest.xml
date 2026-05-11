@@ -12,16 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
             android:name=".SignUpaActivity"
             android:exported="false" />
         <activity
             android:name=".SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".SignInActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".LogoActivity"
