@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class SignInActivity extends AppCompatActivity {
 
     private TextView signUpTV;
+    private TextView signInTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,14 @@ public class SignInActivity extends AppCompatActivity {
             startActivity(intent);
             finish();
         });
+        signInTV = findViewById(R.id.sign_in);
+        signInTV.setOnClickListener(v ->  {
+           Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+           startActivity(intent);
+           finish();
+        });
+
+
         }
 
 
