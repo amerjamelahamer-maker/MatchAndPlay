@@ -9,6 +9,9 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class LogoActivity extends AppCompatActivity {
 
     @Override
@@ -30,9 +33,16 @@ public class LogoActivity extends AppCompatActivity {
 
             try {
                 Thread.sleep(3000);
-                Intent intent = new Intent(LogoActivity.this, SignInActivity.class);
-                startActivity(intent);
-                finish();
+                FirebaseUser user = DBRef.auth.getCurrentUser();
+                if( user == null ) {
+                    Intent intent = new Intent(LogoActivity.this, SignInActivity.class);
+                    startActivity(intent);
+                    finish();
+                }else{
+                    Intent intent = new Intent(LogoActivity.this, MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
